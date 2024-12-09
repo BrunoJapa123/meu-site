@@ -251,51 +251,124 @@ a{
 
 
 
-@media (max-width: 768px) {
+/* Responsividade - Ajustando a largura de cada parte no container */
+@media (max-width: 1024px) {
     .procedimento2 {
-        grid-template-columns: 1fr 1fr; /* Duas colunas para telas menores */
+        grid-template-columns: repeat(2, 1fr); /* Em telas médias, exibe 2 colunas */
     }
 
     .caixa {
-        padding: 15px;
-    }
-
-    .sobre-nos {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px; /* Reduz a margem */
-    }
-
-    .sobre-nos img {
-        max-width: 80%;
+        padding: 30px; /* Menos espaçamento nas caixas */
         margin-top: 20px;
     }
 
-    /* Ajustes no rodapé para telas pequenas */
+    .sobre-nos {
+      
+        flex-direction: column; /* Empilha os elementos em telas menores */
+        align-items: center;
+    }
+
+    .sobre-nos img {
+        max-width: 200%; /* Ajusta a largura da imagem */
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 720px) {
+    /* Ajustes para telas pequenas */
+    .procedimento2 {
+        grid-template-columns: 2fr 2fr ; /* Exibe uma única coluna */
+    }
+.paragrafo-procedimento{
+    font-size: 7px;
+}
+    .caixa {
+        padding: 20px; /* Reduz o padding */
+        margin-top: 20px;
+        width: 100%; /* Garante que as caixas ocupem 90% da largura da tela */
+        min-height: 250px; /* Ajusta a altura mínima */
+        margin-bottom: -10%;
+    }
+
     .rodape {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        text-align: center;
-        height: auto; /* Ajuste a altura para caber todo o conteúdo */
+        
+        height: auto; /* Ajusta a altura */
+        padding: 20px 0; /* Ajusta o padding do rodapé */
     }
 
-    .conteudo-do-meio {
-        flex-direction: column; /* Coloca os links um embaixo do outro */
-        align-items: center;
+    .logo {
+        width: 70px; /* Reduz o tamanho da logo */
+        height: 70px;
     }
 
+    .name {
+        font-size: 16px; /* Reduz o tamanho da fonte no nome */
+    }
+
+    .button-prev, .button-next {
+        font-size: 10px; /* Reduz o tamanho das setas */
+        width: 40px;
+        height: 80px;
+    }
+
+    .conteudo-esquerdo,
+    .conteudo-do-meio,
     .conteudo-direito {
-        flex-direction: column; /* Empilha os botões sociais */
+        flex-direction: column;
         align-items: center;
-        margin-top: 10px;
+        width: 100%;
     }
 
     .btn-insta, .btn-zazap, .btn-face {
-        margin: 5px 0; /* Ajuste da margem para não sobrecarregar */
-        font-size: 22px; /* Tamanho menor para os ícones */
+        font-size: 24px; /* Ajusta o tamanho dos ícones */
+    }
+
+    /* Ajusta o tamanho das imagens nos procedimentos */
+    .imagem-procedimento {
+        width: 100%;
+        height: 150px; /* Ajusta a altura */
+        object-fit: cover;
+    }
+    .sobre-nos{
+        margin-top: 30%;
+        width: 70%;
+        margin-right: 500px ;
+       
+    }
+    .sobre-nos img{
+        width: 400px;
     }
 }
 
 
+@media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas */
+    .rodape {
+        padding: 10px 15px; /* Reduz o padding do rodapé */
+        text-align: center;
+    }
+
+    .caixa {
+        width: 100%; /* As caixas ocupam toda a largura da tela */
+        padding: 15px;
+    }
+
+    .procedimento2 {
+        grid-template-columns: 1fr; /* Exibe uma coluna única */
+    }
+
+    .titulo-procedimento {
+        font-size: 14px; /* Ajusta o tamanho do título nos procedimentos */
+    }
+
+    .paragrafo-procedimento {
+        font-size: 12px; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+    
+    .button {
+        font-size: 14px; /* Ajusta o tamanho dos botões */
+    }
+}
 
 
 
