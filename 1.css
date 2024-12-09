@@ -251,10 +251,9 @@ a{
 
 
 
-/* Responsividade */
 @media (max-width: 768px) {
     .procedimento2 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Duas colunas para telas menores */
     }
 
     .caixa {
@@ -264,11 +263,35 @@ a{
     .sobre-nos {
         flex-direction: column;
         align-items: center;
+        margin: 20px; /* Reduz a margem */
     }
 
     .sobre-nos img {
         max-width: 80%;
         margin-top: 20px;
+    }
+
+    /* Ajustes no rodapé para telas pequenas */
+    .rodape {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+        height: auto; /* Ajuste a altura para caber todo o conteúdo */
+    }
+
+    .conteudo-do-meio {
+        flex-direction: column; /* Coloca os links um embaixo do outro */
+        align-items: center;
+    }
+
+    .conteudo-direito {
+        flex-direction: column; /* Empilha os botões sociais */
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .btn-insta, .btn-zazap, .btn-face {
+        margin: 5px 0; /* Ajuste da margem para não sobrecarregar */
+        font-size: 22px; /* Tamanho menor para os ícones */
     }
 }
 
